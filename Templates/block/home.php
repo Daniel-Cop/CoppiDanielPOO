@@ -1,0 +1,2 @@
+<h2>Welcole to Motocyle!</h2>
+<p>We are here to offer you a big catalog of motocycle! Feel free to take a look to our avaible motocycle <a href="http://localhost/CoppiDanielPOO/index.php/moto/">here</a>!</p>
