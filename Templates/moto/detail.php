@@ -12,8 +12,8 @@
     <div class="d-flex justify-content-center align-items-center">
         <a href="http://localhost/CoppiDanielPOO/index.php/moto/edit/<?php echo($moto->getId()) ?>" class="rounded bg-secondary text-light text-decoration-none p-2 ps-3 pe-3 m-3 me-3 btn">Edit</a> 
         <!-- thanks to this form we don't need a page template to delete -->
-        <form action="http://localhost/CoppiDanielPOO/index.php/moto/delete/<?php echo($moto->getId()) ?>" method="DELETE" onsubmit="return confirm('Are you sure you want to delete <?php echo($moto->getBrand()) ?> <?php echo($moto->getModel()) ?>?');">
-        <input type="submit" value="Delete" class="rounded bg-danger text-light text-decoration-none p-2 m-3 me-3 btn" >
+        <form action="http://localhost/CoppiDanielPOO/index.php/moto/delete/<?php echo($moto->getId()) ?>" method="POST" onsubmit="return confirm('Are you sure you want to delete <?php echo($moto->getBrand()) ?> <?php echo($moto->getModel()) ?>?');">
+            <input type="submit" value="Delete" class="rounded bg-danger text-light text-decoration-none p-2 m-3 me-3 btn" >
         </form>
     </div>
 </div>

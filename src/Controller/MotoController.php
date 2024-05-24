@@ -74,7 +74,7 @@ class MotoController
                 $newMoto = new Moto(0, $brand, $model, $type, $price, $image);
                 //add it to the DB
                 $this->motoManager->add($newMoto);
-                header("http://localhost/CoppiDanielPOO/index.php/moto/");
+                header("Location: http://localhost/CoppiDanielPOO/index.php/moto/");
             } else {
                 $error = "A parameters is missing or invalid";
             }
@@ -109,7 +109,7 @@ class MotoController
 
                         //update the DB
                         $this->motoManager->edit($moto);
-                        header("http://localhost/CoppiDanielPOO/index.php/moto/");
+                        header(" Location: http://localhost/CoppiDanielPOO/index.php/moto/");
 
                     } else {
                         $error = "A parameters is missing or invalid";
@@ -129,13 +129,12 @@ class MotoController
     {
         $moto = $this->motoManager->findById($id);
         if ($moto instanceof Moto) {
-            if($_SERVER['REQUEST_METHOD'] === "DELETE") {
+            if($_SERVER['REQUEST_METHOD'] === "POST") {
                 $this->motoManager->delete($id);
-                header("http://localhost/CoppiDanielPOO/index.php/moto/");
+                header("Location: http://localhost/CoppiDanielPOO/index.php/moto/");
             } else {
-                //if we arrive in method not DELETE
+                //if we arrive in method not POST
             }
-            include(__DIR__."/../../Templates/moto/delete.php");
         } else {
             $error = "Moto not found";
             include(__DIR__."/../../Templates/block/error.php");

@@ -22,6 +22,6 @@
     <label for="price" class="fs-4 fw-bold">Price :</label>
     <input id="price" name="price" type="number" required>
     <label for="image" class="fs-4 fw-bold"> Image :</label>
-    <input id="image" name="image"type="text">
+    <input id="image" name="image" type="text">
     <input type="submit" value="Add motocycle" class="btn rounded bg-secondary text-light m-3">
 </form>
