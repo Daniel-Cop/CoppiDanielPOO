@@ -27,7 +27,9 @@ class MotoController
             include(__DIR__."/../../Templates/moto/detail.php");
           return $moto;
         } else {
-            echo ("Moto not found!");
+                            
+            $error = "Moto not found";
+            include(__DIR__."/../../Templates/block/error.php");
         }
     }
 
@@ -41,7 +43,9 @@ class MotoController
             $title = "All our ".ucfirst($type);
             include(__DIR__."/../../Templates/moto/index.php");
         } else {
-            echo ("Moto not found!");
+                            
+            $error = "Moto not found";
+            include(__DIR__."/../../Templates/block/error.php");
         }
     }
 
@@ -72,7 +76,7 @@ class MotoController
                 $this->motoManager->add($newMoto);
                 header("http://localhost/CoppiDanielPOO/index.php/moto/");
             } else {
-                echo ("A parameters is missing or invalid");
+                $error = "A parameters is missing or invalid";
             }
 
         } else {
@@ -108,14 +112,15 @@ class MotoController
                         header("http://localhost/CoppiDanielPOO/index.php/moto/");
 
                     } else {
-                        echo ("A parameters is missing or invalid");
+                        $error = "A parameters is missing or invalid";
                     }
             } else {
             //if we arrive not in POST
             }
             include(__DIR__."/../../Templates/moto/edit.php");
         } else {
-            echo ("Moto not found!");
+            $error = "Moto not found";
+            include(__DIR__."/../../Templates/block/error.php");
         }
     }
 
@@ -132,7 +137,8 @@ class MotoController
             }
             include(__DIR__."/../../Templates/moto/delete.php");
         } else {
-            echo ("Moto not found!");
+            $error = "Moto not found";
+            include(__DIR__."/../../Templates/block/error.php");
         }
     }
 

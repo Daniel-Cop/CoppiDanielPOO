@@ -44,7 +44,9 @@ class Router
                             $motoController->edit($segments[2]);
 
                         } else {
-                            echo "ROUTE: /moto/edit/ Bad Request: Missing ID";
+                           
+                            $error = "Bad Request: Missing ID";
+                            include(__DIR__."/../Templates/block/error.php");
                         }
 
                         break;
@@ -56,7 +58,9 @@ class Router
                             $motoController->delete($segments[2]);
 
                         } else {
-                            echo "ROUTE: /moto/delete/ Bad Request: Missing ID";
+                            
+                            $error = "Bad Request: Missing ID";
+                            include(__DIR__."/../Templates/block/error.php");
                         }
 
                         break;
@@ -90,7 +94,8 @@ class Router
             default:
                 // If $mainRoute does not corrispond to a known route
                 //In our case just have moto
-                echo "Page not found";
+                $error = "Page not found";
+                include(__DIR__."/../Templates/block/error.php");
                 break;
         }
     }
