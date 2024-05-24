@@ -74,7 +74,7 @@ class MotoManager extends DatabaseManager {
         try {
             $query = $this->getConnection()->prepare("UPDATE motos SET brand=:brand, model=:model, type=:type, price=:price, image=:image WHERE id=:id");
             $query->execute([
-                ":id"=>$service->getId(),
+                ":id"=>$moto->getId(),
                 ":brand" =>$moto->getBrand(),
                 ":model" =>$moto->getModel(),
                 ":type" =>$moto->getType(),

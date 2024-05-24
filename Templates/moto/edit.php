@@ -34,7 +34,7 @@
     <input id="price" name="price" type="number" value="<?php echo($moto->getPrice()) ?>" required>
     <label for="image" class="fs-4 fw-bold"> Image :</label>
     <input id="image" name="image"type="text">
-    <input type="submit" value="Edit motocycle" class="btn rounded bg-secondary text-light m-3">
+    <input type="submit" value="Edit motocycle" class="btn rounded bg-secondary text-light m-3" >
 </form>
 </div>
 

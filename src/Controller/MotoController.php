@@ -67,7 +67,7 @@ class MotoController
             $model = isset($_POST['model']) && strlen(trim($_POST["model"])) != 0 ? $_POST['model'] : false;
             $type = isset($_POST['type']) && strlen(trim($_POST["type"])) != 0 ? $_POST['type'] : false;
             $price = isset($_POST['price']) ? $_POST['price'] : false;
-            $image = isset($_POST['image']) && strlen(trim($_POST["brand"])) != 0 ? $_POST['image'] : '/img/placeholder.jpg';
+            $image = isset($_POST['image']) && strlen(trim($_POST["image"])) != 0 ? $_POST['image'] : '/img/placeholder.jpg';
         
             if ($brand != false && $model != false && $type != false && $price != false) {
                 //create a Moto object with the data
@@ -97,7 +97,7 @@ class MotoController
                 $newModel = isset($_POST['model']) && strlen(trim($_POST["model"])) != 0 ? $_POST['model'] : false;
                 $newType = isset($_POST['type']) && strlen(trim($_POST["type"])) != 0 ? $_POST['type'] : false;
                 $newPrice = isset($_POST['price']) ? $_POST['price'] : false;
-                $newImage = isset($_POST['image']) && strlen(trim($_POST["brand"])) != 0 ? $_POST['image'] : '/img/placeholder.jpg';
+                $newImage = isset($_POST['image']) && strlen(trim($_POST["image"])) != 0 ? $_POST['image'] : $moto->getImage();
                 
                     if ($newBrand != false && $newModel != false && $newType != false && $newPrice != false) {
                         //change the parameters of the moto
